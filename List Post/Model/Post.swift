@@ -29,6 +29,11 @@ extension Post {
     mutating func addUserInfo(user getJSON: JSON) {
         userInfo = User(user: getJSON)
     }
+    
+    mutating func addUserInfo(user: User) {
+        userInfo = user
+    }
+    
 }
 
 
