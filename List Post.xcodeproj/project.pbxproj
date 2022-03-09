@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		72C7E73227D86DB90037A2BC /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73127D86DB90037A2BC /* NetworkResult.swift */; };
 		72C7E73527D870580037A2BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73427D870580037A2BC /* User.swift */; };
+		72C7E73727D871C20037A2BC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73627D871C20037A2BC /* Post.swift */; };
 		72D55EBB27D647DB001BBA9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D55EBA27D647DB001BBA9F /* AppDelegate.swift */; };
 		72D55EBF27D647DB001BBA9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D55EBE27D647DB001BBA9F /* ViewController.swift */; };
 		72D55EC227D647DB001BBA9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72D55EC027D647DB001BBA9F /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		5753E786598CF22376CBE3F1 /* Pods_List_Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_List_Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C7E73127D86DB90037A2BC /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		72C7E73427D870580037A2BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		72C7E73627D871C20037A2BC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		72D55EB727D647DB001BBA9F /* List Post.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "List Post.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D55EBA27D647DB001BBA9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72D55EBE27D647DB001BBA9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				72C7E73427D870580037A2BC /* User.swift */,
+				72C7E73627D871C20037A2BC /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				72C7E73527D870580037A2BC /* User.swift in Sources */,
 				72D55EBF27D647DB001BBA9F /* ViewController.swift in Sources */,
 				72D55EBB27D647DB001BBA9F /* AppDelegate.swift in Sources */,
+				72C7E73727D871C20037A2BC /* Post.swift in Sources */,
 				72D55EEC27D64E5C001BBA9F /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
