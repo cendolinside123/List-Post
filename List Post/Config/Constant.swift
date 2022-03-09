@@ -12,7 +12,7 @@ struct Constant {
 }
 
 enum Route: String {
-    case post = "/post"
+    case post = "/posts"
     case user = "/users"
     case album = "/albums"
     case photos = "/photos"
