@@ -24,15 +24,16 @@ extension ListPostViewModel: ListPostVMGuideline {
     func loadListPost(try reloadTime: Int) {
         var listPost: [Post] = []
         let group = DispatchGroup()
-        
+        var errorMessage: Error? = nil
         group.enter()
-        self.useCase.postDataSource.getAllPost(completion: { [weak self] response in
+        self.useCase.postDataSource.getAllPost(completion: { response in
             switch response {
             case .success(let data):
                 listPost = data
                 group.leave()
             case .failed(let error):
-                self?.fetchError?(error)
+//                self?.fetchError?(error)
+                errorMessage = error
                 group.leave()
                 return
             }
@@ -41,12 +42,12 @@ extension ListPostViewModel: ListPostVMGuideline {
         
         group.notify(queue: .global(), execute: { [weak self] in
             
-            if listPost.count == 0 {
-                if reloadTime != 0 {
+            if listPost.count == 0 || errorMessage != nil{
+                if reloadTime > 0 {
                     self?.loadListPost(try: reloadTime - 1)
                     return
                 } else {
-                    self?.fetchError?(ErrorResponse.loadFailed)
+                    self?.fetchError?(errorMessage ?? ErrorResponse.loadFailed)
                     return
                 }
                 
