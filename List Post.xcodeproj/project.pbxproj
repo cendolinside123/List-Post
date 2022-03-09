@@ -10,6 +10,16 @@
 		72C7E73227D86DB90037A2BC /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73127D86DB90037A2BC /* NetworkResult.swift */; };
 		72C7E73527D870580037A2BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73427D870580037A2BC /* User.swift */; };
 		72C7E73727D871C20037A2BC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73627D871C20037A2BC /* Post.swift */; };
+		72C7E73C27D8AAEB0037A2BC /* UserNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73B27D8AAEB0037A2BC /* UserNetworkProvider.swift */; };
+		72C7E73E27D8ABDE0037A2BC /* UserDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73D27D8ABDE0037A2BC /* UserDataSource.swift */; };
+		72C7E74127D8AF200037A2BC /* PostNetworkProfider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E74027D8AF200037A2BC /* PostNetworkProfider.swift */; };
+		72C7E74327D8AF4F0037A2BC /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E74227D8AF4F0037A2BC /* PostDataSource.swift */; };
+		72C7E74727D8B6A00037A2BC /* ListPostVMGuideline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E74627D8B6A00037A2BC /* ListPostVMGuideline.swift */; };
+		72C7E74927D8B8480037A2BC /* ListPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E74827D8B8480037A2BC /* ListPostViewModel.swift */; };
+		72C7E74B27D8C6360037A2BC /* ListPostUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E74A27D8C6360037A2BC /* ListPostUT.swift */; };
+		72C7E74E27D8D5AC0037A2BC /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 72C7E74D27D8D5AC0037A2BC /* posts.json */; };
+		72C7E75027D8D60D0037A2BC /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 72C7E74F27D8D60D0037A2BC /* users.json */; };
+		72C7E75227D8D6540037A2BC /* DataMockup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E75127D8D6540037A2BC /* DataMockup.swift */; };
 		72D55EBB27D647DB001BBA9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D55EBA27D647DB001BBA9F /* AppDelegate.swift */; };
 		72D55EBF27D647DB001BBA9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D55EBE27D647DB001BBA9F /* ViewController.swift */; };
 		72D55EC227D647DB001BBA9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72D55EC027D647DB001BBA9F /* Main.storyboard */; };
@@ -48,6 +58,16 @@
 		72C7E73127D86DB90037A2BC /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		72C7E73427D870580037A2BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		72C7E73627D871C20037A2BC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		72C7E73B27D8AAEB0037A2BC /* UserNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkProvider.swift; sourceTree = "<group>"; };
+		72C7E73D27D8ABDE0037A2BC /* UserDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataSource.swift; sourceTree = "<group>"; };
+		72C7E74027D8AF200037A2BC /* PostNetworkProfider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNetworkProfider.swift; sourceTree = "<group>"; };
+		72C7E74227D8AF4F0037A2BC /* PostDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataSource.swift; sourceTree = "<group>"; };
+		72C7E74627D8B6A00037A2BC /* ListPostVMGuideline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostVMGuideline.swift; sourceTree = "<group>"; };
+		72C7E74827D8B8480037A2BC /* ListPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostViewModel.swift; sourceTree = "<group>"; };
+		72C7E74A27D8C6360037A2BC /* ListPostUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostUT.swift; sourceTree = "<group>"; };
+		72C7E74D27D8D5AC0037A2BC /* posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
+		72C7E74F27D8D60D0037A2BC /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		72C7E75127D8D6540037A2BC /* DataMockup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMockup.swift; sourceTree = "<group>"; };
 		72D55EB727D647DB001BBA9F /* List Post.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "List Post.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D55EBA27D647DB001BBA9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72D55EBE27D647DB001BBA9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +157,68 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		72C7E73827D8A9BD0037A2BC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				72C7E74427D8B5990037A2BC /* ViewModel */,
+				72C7E73927D8A9CE0037A2BC /* DataSource */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72C7E73927D8A9CE0037A2BC /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				72C7E73F27D8AEAB0037A2BC /* Post */,
+				72C7E73A27D8AA700037A2BC /* User */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		72C7E73A27D8AA700037A2BC /* User */ = {
+			isa = PBXGroup;
+			children = (
+				72C7E73B27D8AAEB0037A2BC /* UserNetworkProvider.swift */,
+				72C7E73D27D8ABDE0037A2BC /* UserDataSource.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		72C7E73F27D8AEAB0037A2BC /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				72C7E74027D8AF200037A2BC /* PostNetworkProfider.swift */,
+				72C7E74227D8AF4F0037A2BC /* PostDataSource.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		72C7E74427D8B5990037A2BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				72C7E74527D8B5DC0037A2BC /* ListPostViewModel */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		72C7E74527D8B5DC0037A2BC /* ListPostViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				72C7E74627D8B6A00037A2BC /* ListPostVMGuideline.swift */,
+				72C7E74827D8B8480037A2BC /* ListPostViewModel.swift */,
+			);
+			path = ListPostViewModel;
+			sourceTree = "<group>";
+		};
+		72C7E74C27D8D5960037A2BC /* SupportingFile */ = {
+			isa = PBXGroup;
+			children = (
+				72C7E74F27D8D60D0037A2BC /* users.json */,
+				72C7E74D27D8D5AC0037A2BC /* posts.json */,
+			);
+			path = SupportingFile;
+			sourceTree = "<group>";
+		};
 		72D55EAE27D647DB001BBA9F = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +244,7 @@
 		72D55EB927D647DB001BBA9F /* List Post */ = {
 			isa = PBXGroup;
 			children = (
+				72C7E73827D8A9BD0037A2BC /* Controller */,
 				72C7E73327D870210037A2BC /* Model */,
 				72D55EEA27D64E47001BBA9F /* Config */,
 				72D55EBA27D647DB001BBA9F /* AppDelegate.swift */,
@@ -177,7 +260,10 @@
 		72D55ED027D647DE001BBA9F /* List PostTests */ = {
 			isa = PBXGroup;
 			children = (
+				72C7E74C27D8D5960037A2BC /* SupportingFile */,
 				72D55ED127D647DE001BBA9F /* List_PostTests.swift */,
+				72C7E74A27D8C6360037A2BC /* ListPostUT.swift */,
+				72C7E75127D8D6540037A2BC /* DataMockup.swift */,
 			);
 			path = "List PostTests";
 			sourceTree = "<group>";
@@ -323,6 +409,8 @@
 				72D55EC727D647DD001BBA9F /* LaunchScreen.storyboard in Resources */,
 				72D55EC427D647DD001BBA9F /* Assets.xcassets in Resources */,
 				72D55EC227D647DB001BBA9F /* Main.storyboard in Resources */,
+				72C7E75027D8D60D0037A2BC /* users.json in Resources */,
+				72C7E74E27D8D5AC0037A2BC /* posts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,13 +538,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C7E73C27D8AAEB0037A2BC /* UserNetworkProvider.swift in Sources */,
 				72D55EEE27D66746001BBA9F /* String+Extension.swift in Sources */,
+				72C7E73E27D8ABDE0037A2BC /* UserDataSource.swift in Sources */,
+				72C7E74727D8B6A00037A2BC /* ListPostVMGuideline.swift in Sources */,
 				72C7E73227D86DB90037A2BC /* NetworkResult.swift in Sources */,
+				72C7E74327D8AF4F0037A2BC /* PostDataSource.swift in Sources */,
 				72C7E73527D870580037A2BC /* User.swift in Sources */,
+				72C7E74127D8AF200037A2BC /* PostNetworkProfider.swift in Sources */,
 				72D55EBF27D647DB001BBA9F /* ViewController.swift in Sources */,
 				72D55EBB27D647DB001BBA9F /* AppDelegate.swift in Sources */,
 				72C7E73727D871C20037A2BC /* Post.swift in Sources */,
 				72D55EEC27D64E5C001BBA9F /* Constant.swift in Sources */,
+				72C7E74927D8B8480037A2BC /* ListPostViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +558,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C7E75227D8D6540037A2BC /* DataMockup.swift in Sources */,
+				72C7E74B27D8C6360037A2BC /* ListPostUT.swift in Sources */,
 				72D55ED227D647DE001BBA9F /* List_PostTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,7 +659,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -618,7 +714,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -698,7 +794,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H9Y26B6GZB;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -724,7 +820,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H9Y26B6GZB;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
