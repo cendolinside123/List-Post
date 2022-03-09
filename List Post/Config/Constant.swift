@@ -16,4 +16,5 @@ enum Route: String {
     case user = "/users"
     case album = "/albums"
     case photos = "/photos"
+    case comments = "/comments"
 }
