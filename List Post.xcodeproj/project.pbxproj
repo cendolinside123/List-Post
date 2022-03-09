@@ -106,6 +106,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		72C7E72F27D866B20037A2BC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				72D55EED27D66746001BBA9F /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		72D55EAE27D647DB001BBA9F = {
 			isa = PBXGroup;
 			children = (
@@ -162,8 +170,8 @@
 		72D55EEA27D64E47001BBA9F /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				72C7E72F27D866B20037A2BC /* Extension */,
 				72D55EEB27D64E5C001BBA9F /* Constant.swift */,
-				72D55EED27D66746001BBA9F /* String+Extension.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
