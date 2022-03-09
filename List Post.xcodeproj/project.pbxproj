@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72C7E73227D86DB90037A2BC /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73127D86DB90037A2BC /* NetworkResult.swift */; };
 		72D55EBB27D647DB001BBA9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D55EBA27D647DB001BBA9F /* AppDelegate.swift */; };
 		72D55EBF27D647DB001BBA9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D55EBE27D647DB001BBA9F /* ViewController.swift */; };
 		72D55EC227D647DB001BBA9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72D55EC027D647DB001BBA9F /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		1A7385F700FE5047F95433E9 /* Pods-List Post.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-List Post.debug.xcconfig"; path = "Target Support Files/Pods-List Post/Pods-List Post.debug.xcconfig"; sourceTree = "<group>"; };
 		5753E786598CF22376CBE3F1 /* Pods_List_Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_List_Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72C7E73127D86DB90037A2BC /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		72D55EB727D647DB001BBA9F /* List Post.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "List Post.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D55EBA27D647DB001BBA9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72D55EBE27D647DB001BBA9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		72C7E73027D86DA80037A2BC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				72C7E73127D86DB90037A2BC /* NetworkResult.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		72D55EAE27D647DB001BBA9F = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +180,7 @@
 		72D55EEA27D64E47001BBA9F /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				72C7E73027D86DA80037A2BC /* Helper */,
 				72C7E72F27D866B20037A2BC /* Extension */,
 				72D55EEB27D64E5C001BBA9F /* Constant.swift */,
 			);
@@ -426,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72D55EEE27D66746001BBA9F /* String+Extension.swift in Sources */,
+				72C7E73227D86DB90037A2BC /* NetworkResult.swift in Sources */,
 				72D55EBF27D647DB001BBA9F /* ViewController.swift in Sources */,
 				72D55EBB27D647DB001BBA9F /* AppDelegate.swift in Sources */,
 				72D55EEC27D64E5C001BBA9F /* Constant.swift in Sources */,
