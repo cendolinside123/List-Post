@@ -111,6 +111,7 @@ class AlbumUserViewController: UIViewController {
         collectionView.bouncesZoom = false
         collectionView.bounces = false
         collectionView.showsVerticalScrollIndicator = false
+        
         return collectionView
     }()
     
@@ -119,6 +120,7 @@ class AlbumUserViewController: UIViewController {
     
     private var viewModel: ListAlbumsVMGuideline?
     private var setUser: User?
+    private var viewWidth: CGFloat = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -126,7 +128,7 @@ class AlbumUserViewController: UIViewController {
         setupLayout()
         setupConstraints()
         setupCollectionView()
-        
+        viewWidth = view.bounds.width
         viewModel = ListAlbumsViewModel(useCase: UseCaseListAlbum(albumDataSource: AlbumDataSource(), photoDataSource: PhotoDataSource()))
         loadingSpinner.startAnimating()
         
@@ -308,7 +310,7 @@ extension AlbumUserViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collectionView.bounds.width) / 3.5
+        let width = (viewWidth) / 3.5
         
         return CGSize(width: Int(width), height: Int(width))
         
