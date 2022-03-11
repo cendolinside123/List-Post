@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7294544027DB3009006D25A9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294543F27DB3009006D25A9 /* HomeViewController.swift */; };
+		7294544227DB31A8006D25A9 /* UIGuideHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294544127DB31A8006D25A9 /* UIGuideHelper.swift */; };
+		7294544427DB327B006D25A9 /* ListProductUIControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294544327DB327B006D25A9 /* ListProductUIControll.swift */; };
 		72C7E73227D86DB90037A2BC /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73127D86DB90037A2BC /* NetworkResult.swift */; };
 		72C7E73527D870580037A2BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73427D870580037A2BC /* User.swift */; };
 		72C7E73727D871C20037A2BC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73627D871C20037A2BC /* Post.swift */; };
@@ -76,6 +79,9 @@
 /* Begin PBXFileReference section */
 		1A7385F700FE5047F95433E9 /* Pods-List Post.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-List Post.debug.xcconfig"; path = "Target Support Files/Pods-List Post/Pods-List Post.debug.xcconfig"; sourceTree = "<group>"; };
 		5753E786598CF22376CBE3F1 /* Pods_List_Post.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_List_Post.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7294543F27DB3009006D25A9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7294544127DB31A8006D25A9 /* UIGuideHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGuideHelper.swift; sourceTree = "<group>"; };
+		7294544327DB327B006D25A9 /* ListProductUIControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProductUIControll.swift; sourceTree = "<group>"; };
 		72C7E73127D86DB90037A2BC /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		72C7E73427D870580037A2BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		72C7E73627D871C20037A2BC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -171,6 +177,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7294543D27DB2FE8006D25A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7294543E27DB2FF1006D25A9 /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7294543E27DB2FF1006D25A9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7294544327DB327B006D25A9 /* ListProductUIControll.swift */,
+				7294543F27DB3009006D25A9 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		72C7E72F27D866B20037A2BC /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +205,7 @@
 		72C7E73027D86DA80037A2BC /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				7294544127DB31A8006D25A9 /* UIGuideHelper.swift */,
 				72C7E7C227D928DF0037A2BC /* UIImageView.swift */,
 				72C7E73127D86DB90037A2BC /* NetworkResult.swift */,
 			);
@@ -203,6 +227,7 @@
 		72C7E73827D8A9BD0037A2BC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7294543D27DB2FE8006D25A9 /* View */,
 				72C7E74427D8B5990037A2BC /* ViewModel */,
 				72C7E73927D8A9CE0037A2BC /* DataSource */,
 			);
@@ -652,6 +677,8 @@
 				72C7E73C27D8AAEB0037A2BC /* UserNetworkProvider.swift in Sources */,
 				72C7E7C327D928DF0037A2BC /* UIImageView.swift in Sources */,
 				72D55EEE27D66746001BBA9F /* String+Extension.swift in Sources */,
+				7294544027DB3009006D25A9 /* HomeViewController.swift in Sources */,
+				7294544227DB31A8006D25A9 /* UIGuideHelper.swift in Sources */,
 				72C7E77B27D91E6F0037A2BC /* ListPhotosVMGuideline.swift in Sources */,
 				72C7E73E27D8ABDE0037A2BC /* UserDataSource.swift in Sources */,
 				72C7E75527D8F1120037A2BC /* Comment.swift in Sources */,
@@ -675,6 +702,7 @@
 				72C7E76227D8F9F30037A2BC /* ListCommentViewModel.swift in Sources */,
 				72C7E77527D91AFF0037A2BC /* PhotoDataSource.swift in Sources */,
 				72C7E77327D91A760037A2BC /* PhotoNetworkProvider.swift in Sources */,
+				7294544427DB327B006D25A9 /* ListProductUIControll.swift in Sources */,
 				72C7E74927D8B8480037A2BC /* ListPostViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
