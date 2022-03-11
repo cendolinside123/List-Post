@@ -13,6 +13,9 @@ class HomeViewController: UIViewController {
         let tabel = UITableView()
         tabel.backgroundColor = UIColor(white: 1, alpha: 0)
         tabel.allowsSelection = true
+        tabel.bouncesZoom = false
+        tabel.bounces = false
+        tabel.showsVerticalScrollIndicator = false
         return tabel
     }()
     
@@ -158,6 +161,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 20
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        uiControll?.scrollControll(scrollView: scrollView, completion: { [weak self] in
+            self?.viewModel?.loadListPost(try: 3)
+        })
     }
     
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
