@@ -114,6 +114,7 @@ class DetailPostViewController: UIViewController {
             }
             
         })
+        setUpButtonTarget()
     }
     
 
@@ -285,4 +286,20 @@ extension DetailPostViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+}
+extension DetailPostViewController {
+    private func setUpButtonTarget() {
+        userAuthor.addTarget(self, action: #selector(goToAlbum(_:)), for: .touchDown)
+        
+    }
+    
+    @objc private func goToAlbum(_ sender: AnyObject) {
+        if let getPost = postData, let getUser = getPost.userInfo {
+            let albumVC = AlbumUserViewController()
+            albumVC.setData(user: getUser)
+            
+            self.navigationController?.pushViewController(albumVC, animated: true)
+        }
+        
+    }
 }
