@@ -56,8 +56,8 @@ extension ListAlbumsViewModel: ListAlbumsVMGuideline {
                     switch response {
                     case .success(let photos):
                         
-                        if photos.count >= 4 {
-                            listAlbums[index].updateThumbnail(photos: Array(photos[0..<4]))
+                        if photos.count >= 6 {
+                            listAlbums[index].updateThumbnail(photos: Array(photos[0..<6]))
                         } else {
                             listAlbums[index].updateThumbnail(photos: photos)
                         }
