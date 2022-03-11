@@ -29,23 +29,20 @@ extension ListAlbumsViewModel: ListAlbumsVMGuideline {
             switch response {
             case .success(let data):
                 listAlbums = data
-                group.leave()
             case .failed(let error):
                 errorMessage = error
-                group.leave()
-                return
             }
+            group.leave()
         })
         
         group.notify(queue: .global(), execute: { [weak self] in
-            if listAlbums.count == 0 || errorMessage != nil{
-                
-            }
+            
             if reloadTime > 0 {
                 if errorMessage != nil {
                     self?.loadUserAlbums(id: userID, try: reloadTime - 1)
                     return
                 }
+                
             } else {
                 self?.fetchError?(errorMessage ?? ErrorResponse.loadFailed)
                 return
