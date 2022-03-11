@@ -123,6 +123,13 @@ extension AlbumIconCollectionViewCell: UICollectionViewDelegate, UICollectionVie
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PictureCell", for: indexPath) as? PictureCollectionViewCell else {
+            return
+        }
+        cell.returnPicture().kf.cancelDownloadTask()
+        cell.returnPicture().image = #imageLiteral(resourceName: "loading")
+    }
     
 }
 extension AlbumIconCollectionViewCell: UICollectionViewDelegateFlowLayout {

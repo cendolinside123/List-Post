@@ -131,9 +131,9 @@ class AlbumUserViewController: UIViewController {
         viewWidth = view.bounds.width
         viewModel = ListAlbumsViewModel(useCase: UseCaseListAlbum(albumDataSource: AlbumDataSource(), photoDataSource: PhotoDataSource()))
         loadingSpinner.startAnimating()
-        
+        bind()
         group.notify(queue: .main, execute: { [weak self] in
-            self?.bind()
+            
             if let getUser = self?.setUser {
                 self?.viewModel?.loadUserAlbums(id: getUser.id, try: 3)
             }
@@ -254,6 +254,9 @@ class AlbumUserViewController: UIViewController {
         collectionViewAlbum.dataSource = self
         collectionViewAlbum.register(AlbumIconCollectionViewCell.self, forCellWithReuseIdentifier: "AlbumCell")
         collectionViewAlbum.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "default")
+        
+        let clickedCell = UITapGestureRecognizer(target: self, action: #selector(itemPress(tap:)))
+        collectionViewAlbum.addGestureRecognizer(clickedCell)
     }
     
     private func updateCollectionHeighConstraint() {
@@ -288,6 +291,22 @@ class AlbumUserViewController: UIViewController {
         group.leave()
     }
     
+    
+    @objc private func itemPress(tap: UITapGestureRecognizer) {
+        
+        let point = tap.location(in: self.collectionViewAlbum)
+        let indexPath = self.collectionViewAlbum.indexPathForItem(at: point)
+        
+        if let getIndexPath = indexPath {
+            if let getData = viewModel?.listAlbums[getIndexPath.item] {
+                let picVC = PicturesViewController()
+                picVC.setData(album: getData)
+                self.navigationController?.pushViewController(picVC, animated: true)
+            }
+        } else {
+            
+        }
+    }
 }
 extension AlbumUserViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -313,6 +332,15 @@ extension AlbumUserViewController: UICollectionViewDelegate, UICollectionViewDat
         let width = (viewWidth) / 3.5
         
         return CGSize(width: Int(width), height: Int(width))
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let getAlbumData = viewModel?.listAlbums[indexPath.item] {
+            let picVC = PicturesViewController()
+            picVC.setData(album: getAlbumData)
+            self.navigationController?.pushViewController(picVC, animated: true)
+        }
         
     }
 }
