@@ -143,7 +143,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        if let data = viewModel?.listPost[indexPath.row] {
+        if let data = viewModel?.listPost[indexPath.section] {
             cell.setPost(post: data)
         } else {
             return UITableViewCell()
@@ -168,6 +168,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             self?.viewModel?.loadListPost(try: 3)
         })
     }
+    
+    
     
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        
