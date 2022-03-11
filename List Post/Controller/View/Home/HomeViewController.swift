@@ -73,7 +73,7 @@ class HomeViewController: UIViewController {
         let metrix: [String: Any] = [:]
         var constraints: [NSLayoutConstraint] = []
         
-        // MARK: tblMenu constraints
+        // MARK: tblPost and loadingView constraints
         tblPost.translatesAutoresizingMaskIntoConstraints = false
         loadingView.translatesAutoresizingMaskIntoConstraints = false
         let hTblPost = "H:|-[tblPost]-|"
@@ -161,6 +161,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 20
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let data = viewModel?.listPost[indexPath.section] {
+            print("Post id: \(data.id)")
+            
+            let detailVC = DetailPostViewController()
+            detailVC.setPostDetail(post: data)
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
