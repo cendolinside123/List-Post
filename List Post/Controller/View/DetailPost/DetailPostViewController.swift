@@ -191,7 +191,7 @@ class DetailPostViewController: UIViewController {
         
         // MARK: userAuthor constraints
         userAuthor.translatesAutoresizingMaskIntoConstraints = false
-        constraints += [NSLayoutConstraint(item: userAuthor, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 10)]
+        constraints += [NSLayoutConstraint(item: userAuthor, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 30)]
         
         // MARK: viewTitle constraints
         viewTitle.translatesAutoresizingMaskIntoConstraints = false
