@@ -10,6 +10,7 @@
 		7294544027DB3009006D25A9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294543F27DB3009006D25A9 /* HomeViewController.swift */; };
 		7294544227DB31A8006D25A9 /* UIGuideHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294544127DB31A8006D25A9 /* UIGuideHelper.swift */; };
 		7294544427DB327B006D25A9 /* ListProductUIControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294544327DB327B006D25A9 /* ListProductUIControll.swift */; };
+		7294544827DB3E5D006D25A9 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294544727DB3E5D006D25A9 /* PostTableViewCell.swift */; };
 		72C7E73227D86DB90037A2BC /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73127D86DB90037A2BC /* NetworkResult.swift */; };
 		72C7E73527D870580037A2BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73427D870580037A2BC /* User.swift */; };
 		72C7E73727D871C20037A2BC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73627D871C20037A2BC /* Post.swift */; };
@@ -82,6 +83,7 @@
 		7294543F27DB3009006D25A9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7294544127DB31A8006D25A9 /* UIGuideHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGuideHelper.swift; sourceTree = "<group>"; };
 		7294544327DB327B006D25A9 /* ListProductUIControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProductUIControll.swift; sourceTree = "<group>"; };
+		7294544727DB3E5D006D25A9 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		72C7E73127D86DB90037A2BC /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		72C7E73427D870580037A2BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		72C7E73627D871C20037A2BC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -192,6 +194,22 @@
 				7294543F27DB3009006D25A9 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		7294544527DB3E2F006D25A9 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				7294544627DB3E3F006D25A9 /* PostTableViewCell */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		7294544627DB3E3F006D25A9 /* PostTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7294544727DB3E5D006D25A9 /* PostTableViewCell.swift */,
+			);
+			path = PostTableViewCell;
 			sourceTree = "<group>";
 		};
 		72C7E72F27D866B20037A2BC /* Extension */ = {
@@ -373,6 +391,7 @@
 		72D55EB927D647DB001BBA9F /* List Post */ = {
 			isa = PBXGroup;
 			children = (
+				7294544527DB3E2F006D25A9 /* CustomView */,
 				72C7E73827D8A9BD0037A2BC /* Controller */,
 				72C7E73327D870210037A2BC /* Model */,
 				72D55EEA27D64E47001BBA9F /* Config */,
@@ -683,6 +702,7 @@
 				72C7E73E27D8ABDE0037A2BC /* UserDataSource.swift in Sources */,
 				72C7E75527D8F1120037A2BC /* Comment.swift in Sources */,
 				72C7E76027D8F96E0037A2BC /* ListCommentVMGuideline.swift in Sources */,
+				7294544827DB3E5D006D25A9 /* PostTableViewCell.swift in Sources */,
 				72C7E74727D8B6A00037A2BC /* ListPostVMGuideline.swift in Sources */,
 				72C7E76B27D9140A0037A2BC /* Photo.swift in Sources */,
 				72C7E73227D86DB90037A2BC /* NetworkResult.swift in Sources */,
@@ -891,7 +911,6 @@
 				INFOPLIST_FILE = "List Post/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -921,7 +940,6 @@
 				INFOPLIST_FILE = "List Post/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
