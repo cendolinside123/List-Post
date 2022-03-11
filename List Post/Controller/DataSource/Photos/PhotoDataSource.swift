@@ -42,7 +42,7 @@ extension PhotoDataSource: PhotoNetworkProvider {
     
     func getPhotoAlbums(album id: Int, completion: @escaping (NetworkResult<[Photo]>) -> Void) {
         DispatchQueue.global().async {
-            let url = Constant.url.addAPIRoute(path: .album).addAPIRoute(id: id).addAPIRoute(path: .album)
+            let url = Constant.url.addAPIRoute(path: .album).addAPIRoute(id: id).addAPIRoute(path: .photos)
             AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil, requestModifier: nil).responseData(completionHandler: { response in
                 switch response.result {
                 case .success(let data):
