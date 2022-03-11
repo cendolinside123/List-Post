@@ -30,6 +30,7 @@ extension ListCommentViewModel: ListCommentVMGuideline {
             case .failed(let error):
                 if reloadTime > 0 {
                     self?.loadCommentOfPost(id: postID, try: reloadTime - 1)
+                    return
                 } else {
                     self?.fetchError?(error)
                 }

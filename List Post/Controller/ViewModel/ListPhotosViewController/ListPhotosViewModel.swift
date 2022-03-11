@@ -27,7 +27,11 @@ extension ListPhotosViewModel: ListPhotosVMGuideline {
                 self?.listPhotos = data
                 self?.photosResult?(data)
             case .failed(let error):
-                self?.fetchError?(error)
+                if reloadTime > 0 {
+                    self?.loadPhotos(id: albumID, try: reloadTime - 1)
+                } else {
+                    self?.fetchError?(error)
+                }
             }
         })
     }

@@ -39,13 +39,16 @@ extension ListAlbumsViewModel: ListAlbumsVMGuideline {
         
         group.notify(queue: .global(), execute: { [weak self] in
             if listAlbums.count == 0 || errorMessage != nil{
-                if reloadTime > 0 {
+                
+            }
+            if reloadTime > 0 {
+                if errorMessage != nil {
                     self?.loadUserAlbums(id: userID, try: reloadTime - 1)
                     return
-                } else {
-                    self?.fetchError?(errorMessage ?? ErrorResponse.loadFailed)
-                    return
                 }
+            } else {
+                self?.fetchError?(errorMessage ?? ErrorResponse.loadFailed)
+                return
             }
             
             let group2 = DispatchGroup()
