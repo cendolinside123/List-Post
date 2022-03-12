@@ -145,7 +145,7 @@ extension PicturesViewController: UICollectionViewDelegate, UICollectionViewData
         }
         
         if let getData = viewModel?.listPhotos[indexPath.item] {
-            cell.setThumbnail(thumbnail: getData.thumbnailUrl)
+            cell.setThumbnail(photo: getData)
         } else {
             return collectionView.dequeueReusableCell(withReuseIdentifier: "default", for: indexPath)
         }
@@ -166,4 +166,15 @@ extension PicturesViewController: UICollectionViewDelegate, UICollectionViewData
         cell.returnPicture().kf.cancelDownloadTask()
         cell.returnPicture().image = #imageLiteral(resourceName: "loading")
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let getData = viewModel?.listPhotos[indexPath.item] {
+            let detailVC = DetailPictViewController()
+            detailVC.showDetail(pic: getData)
+            let nav = UINavigationController(rootViewController: detailVC)
+            self.present(nav, animated: true, completion: nil)
+        }
+        
+    }
+    
 }
