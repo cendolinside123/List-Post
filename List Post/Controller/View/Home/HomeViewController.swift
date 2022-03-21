@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Loading
 
 class HomeViewController: UIViewController {
     
@@ -19,8 +20,8 @@ class HomeViewController: UIViewController {
         return tabel
     }()
     
-    private let loadingSpinner = UIActivityIndicatorView()
-    private let loadingView = UIView()
+//    private let loadingSpinner = UIActivityIndicatorView()
+    private let loadingView = LoadingView()
     private var uiControll: ListUIGuideHelper?
     private var viewModel: ListPostVMGuideline?
 
@@ -69,7 +70,7 @@ class HomeViewController: UIViewController {
     }
     
     private func addConstraints() {
-        let views: [String: Any] = ["tblPost": tblPost, "loadingView": loadingView, "loadingSpinner": loadingSpinner]
+        let views: [String: Any] = ["tblPost": tblPost, "loadingView": loadingView]
         let metrix: [String: Any] = [:]
         var constraints: [NSLayoutConstraint] = []
         
@@ -86,10 +87,6 @@ class HomeViewController: UIViewController {
         loadingViewHeight.identifier = "loadingViewHeight"
         constraints += [loadingViewHeight]
         
-        // MARK: loadingSpinner constraints
-        loadingSpinner.translatesAutoresizingMaskIntoConstraints = false
-        constraints += [NSLayoutConstraint(item: loadingSpinner, attribute: .centerX, relatedBy: .equal, toItem: loadingView, attribute: .centerX, multiplier: 1, constant: 0)]
-        constraints += [NSLayoutConstraint(item: loadingSpinner, attribute: .centerY, relatedBy: .equal, toItem: loadingView, attribute: .centerY, multiplier: 1, constant: 0)]
         
         NSLayoutConstraint.activate(constraints)
     }
@@ -100,10 +97,8 @@ class HomeViewController: UIViewController {
     }
     
     private func setLoadingView() {
-        loadingSpinner.color = .gray
-        loadingView.addSubview(loadingSpinner)
-        loadingSpinner.startAnimating()
-        loadingView.backgroundColor = .white
+//        loadingView.backgroundColor = .white
+        loadingView.startAnimate()
         view.addSubview(loadingView)
     }
     
@@ -119,12 +114,8 @@ class HomeViewController: UIViewController {
 
 }
 extension HomeViewController {
-    public func getLoadingView() -> UIView {
+    func getLoadingView() -> LoadingView {
         return loadingView
-    }
-    
-    public func getLoadingSpinner() -> UIActivityIndicatorView {
-        return loadingSpinner
     }
 }
 

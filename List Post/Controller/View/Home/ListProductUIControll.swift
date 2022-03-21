@@ -38,7 +38,7 @@ extension ListProductUIControll: ListUIGuideHelper {
             constraints[getLoadingHeigh] = NSLayoutConstraint(item: _controller.getLoadingView(), attribute: .height, relatedBy: .equal, toItem: _controller.view, attribute: .height, multiplier: 1/9, constant: 0)
             constraints[getLoadingHeigh].identifier = "loadingViewHeight"
             NSLayoutConstraint.activate(constraints)
-            _controller.getLoadingSpinner().startAnimating()
+            _controller.getLoadingView().startAnimate()
             _controller.view.layoutIfNeeded()
         }, completion: { isFinish in
             if isFinish {
@@ -63,7 +63,7 @@ extension ListProductUIControll: ListUIGuideHelper {
             constraints[getLoadingHeigh] = NSLayoutConstraint(item: _controller.getLoadingView(), attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 0)
             constraints[getLoadingHeigh].identifier = "loadingViewHeight"
             NSLayoutConstraint.activate(constraints)
-            _controller.getLoadingSpinner().stopAnimating()
+            _controller.getLoadingView().stopAnimate()
             _controller.view.layoutIfNeeded()
         }, completion: { isFinish in
             if isFinish {
