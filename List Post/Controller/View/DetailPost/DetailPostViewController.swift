@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Loading
 
 
 class DetailPostViewController: UIViewController {
@@ -89,8 +89,8 @@ class DetailPostViewController: UIViewController {
         return label
     }()
     
-    private let loadingSpinner = UIActivityIndicatorView()
-    private let loadingView = UIView()
+//    private let loadingSpinner = UIActivityIndicatorView()
+    private let loadingView = LoadingView()
     
     private var postData: Post?
     private var viewModel: ListCommentVMGuideline?
@@ -107,7 +107,8 @@ class DetailPostViewController: UIViewController {
         viewModel = ListCommentViewModel(useCase: CommentDataSource())
         setupTabel()
         bind()
-        self.loadingSpinner.startAnimating()
+//        self.loadingSpinner.startAnimating()
+        self.loadingView.startAnimate()
         group.notify(queue: .main, execute: { [weak self] in
             if let getPostInfo = self?.postData {
                 self?.viewModel?.loadCommentOfPost(id: getPostInfo.id, try: 3)
@@ -129,13 +130,15 @@ class DetailPostViewController: UIViewController {
     */
     private func bind() {
         viewModel?.fetchError = { [weak self] _ in
-            self?.loadingSpinner.stopAnimating()
+//            self?.loadingSpinner.stopAnimating()
+            self?.loadingView.stopAnimate()
             self?.loadingView.isHidden = true
             self?.bodyPost.text = self?.postData?.body
         }
         viewModel?.commentResult = { [weak self] _ in
             self?.tblComment.reloadData()
-            self?.loadingSpinner.stopAnimating()
+//            self?.loadingSpinner.stopAnimating()
+            self?.loadingView.stopAnimate()
             self?.loadingView.isHidden = true
             self?.bodyPost.text = self?.postData?.body
         }
@@ -164,7 +167,7 @@ class DetailPostViewController: UIViewController {
     }
     
     private func addConstraints() {
-        let views: [String: Any] = ["contentScrollView": contentScrollView, "viewTitle": viewTitle, "labelPostTitle": labelPostTitle, "userAuthor": userAuthor, "stackTitle": stackTitle, "bodyPost": bodyPost, "tblComment": tblComment, "contentStackView": contentStackView, "loadingSpinner": loadingSpinner, "loadingView": loadingView]
+        let views: [String: Any] = ["contentScrollView": contentScrollView, "viewTitle": viewTitle, "labelPostTitle": labelPostTitle, "userAuthor": userAuthor, "stackTitle": stackTitle, "bodyPost": bodyPost, "tblComment": tblComment, "contentStackView": contentStackView, "loadingView": loadingView]
         let matrix: [String: Any] = [:]
         var constraints: [NSLayoutConstraint] = []
         
@@ -205,18 +208,11 @@ class DetailPostViewController: UIViewController {
         constraints += [NSLayoutConstraint(item: loadingView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0)]
         constraints += [NSLayoutConstraint(item: tblComment, attribute: .top, relatedBy: .equal, toItem: loadingView, attribute: .top, multiplier: 1, constant: 20)]
         
-        // MARK: loadingSpinner constraints
-        loadingSpinner.translatesAutoresizingMaskIntoConstraints = false
-        constraints += [NSLayoutConstraint(item: loadingSpinner, attribute: .centerX, relatedBy: .equal, toItem: loadingView, attribute: .centerX, multiplier: 1, constant: 0)]
-        constraints += [NSLayoutConstraint(item: loadingSpinner, attribute: .centerY, relatedBy: .equal, toItem: loadingView, attribute: .centerY, multiplier: 1, constant: 0)]
-        
         NSLayoutConstraint.activate(constraints)
     }
     
     private func setLoadingView() {
-        loadingSpinner.color = .gray
-        loadingView.addSubview(loadingSpinner)
-        loadingSpinner.startAnimating()
+        
         loadingView.backgroundColor = .white
         view.addSubview(loadingView)
     }
@@ -236,9 +232,9 @@ extension DetailPostViewController {
         return loadingView
     }
     
-    func getLoadingSpinner() -> UIActivityIndicatorView {
-        return loadingSpinner
-    }
+//    func getLoadingSpinner() -> UIActivityIndicatorView {
+//        return loadingSpinner
+//    }
     
     func setPostDetail(post data: Post) {
         group.enter()

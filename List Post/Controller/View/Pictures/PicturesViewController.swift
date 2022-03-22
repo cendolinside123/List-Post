@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Loading
 
 class PicturesViewController: UIViewController {
     
@@ -27,8 +28,8 @@ class PicturesViewController: UIViewController {
         
         return collectionView
     }()
-    private let loadingSpinner = UIActivityIndicatorView()
-    private let loadingView = UIView()
+//    private let loadingSpinner = UIActivityIndicatorView()
+    private let loadingView = LoadingView()
     
     private var viewModel: ListPhotosVMGuideline?
     private var viewWidth: CGFloat = 0
@@ -45,6 +46,7 @@ class PicturesViewController: UIViewController {
         setupCollectionView()
         viewModel = ListPhotosViewModel(useCase: PhotoDataSource())
         bind()
+        loadingView.startAnimate()
         group.notify(queue: .main, execute: { [weak self] in
             if let getAlbum = self?.setAlbum {
                 self?.viewModel?.loadPhotos(id: getAlbum.id, try: 3)
@@ -66,20 +68,19 @@ class PicturesViewController: UIViewController {
     
     private func bind() {
         viewModel?.fetchError = {[weak self] _ in
-            self?.loadingSpinner.stopAnimating()
+//            self?.loadingSpinner.stopAnimating()
+            self?.loadingView.stopAnimate()
             self?.loadingView.isHidden = true
         }
         viewModel?.photosResult = { [weak self] _ in
-            self?.loadingSpinner.stopAnimating()
+//            self?.loadingSpinner.stopAnimating()
+            self?.loadingView.stopAnimate()
             self?.loadingView.isHidden = true
             self?.collectionViewPictures.reloadData()
         }
     }
     
     private func setLoadingView() {
-        loadingSpinner.color = .gray
-        loadingView.addSubview(loadingSpinner)
-        loadingSpinner.startAnimating()
         loadingView.backgroundColor = .white
         view.addSubview(loadingView)
     }
@@ -109,11 +110,6 @@ class PicturesViewController: UIViewController {
         constraints += [NSLayoutConstraint(item: loadingView, attribute: .width, relatedBy: .equal, toItem: loadingView, attribute: .height, multiplier: 1, constant: 0)]
         constraints += [NSLayoutConstraint(item: loadingView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0)]
         constraints += [NSLayoutConstraint(item: collectionViewPictures, attribute: .top, relatedBy: .equal, toItem: loadingView, attribute: .top, multiplier: 1, constant: CGFloat(Int(collectionViewPictures.bounds.height/2)))]
-        
-        // MARK: loadingSpinner constraints
-        loadingSpinner.translatesAutoresizingMaskIntoConstraints = false
-        constraints += [NSLayoutConstraint(item: loadingSpinner, attribute: .centerX, relatedBy: .equal, toItem: loadingView, attribute: .centerX, multiplier: 1, constant: 0)]
-        constraints += [NSLayoutConstraint(item: loadingSpinner, attribute: .centerY, relatedBy: .equal, toItem: loadingView, attribute: .centerY, multiplier: 1, constant: 0)]
         
         NSLayoutConstraint.activate(constraints)
     }
