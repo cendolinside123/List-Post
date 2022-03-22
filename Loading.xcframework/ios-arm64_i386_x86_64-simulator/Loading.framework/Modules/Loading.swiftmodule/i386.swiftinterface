@@ -1,0 +1,17 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Loading
+@_exported import Loading
+import Swift
+import UIKit
+import _Concurrency
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class LoadingView : UIKit.UIView {
+  @objc deinit
+}
+extension Loading.LoadingView {
+  @_Concurrency.MainActor(unsafe) public func startAnimate()
+  @_Concurrency.MainActor(unsafe) public func stopAnimate()
+  @_Concurrency.MainActor(unsafe) public func setbackgroundColor(set color: UIKit.UIColor)
+  @_Concurrency.MainActor(unsafe) public func setBorderWidth(set width: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func setBorderColor(set color: CoreGraphics.CGColor)
+}

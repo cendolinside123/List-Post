@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		726A960D27E907BE00B936AC /* Loading.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726A960627E9021400B936AC /* Loading.xcframework */; };
-		726A960E27E907BE00B936AC /* Loading.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 726A960627E9021400B936AC /* Loading.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7294544027DB3009006D25A9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294543F27DB3009006D25A9 /* HomeViewController.swift */; };
 		7294544227DB31A8006D25A9 /* UIGuideHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294544127DB31A8006D25A9 /* UIGuideHelper.swift */; };
 		7294544427DB327B006D25A9 /* ListProductUIControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294544327DB327B006D25A9 /* ListProductUIControll.swift */; };
@@ -21,6 +19,8 @@
 		7294545927DBC625006D25A9 /* PictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294545827DBC625006D25A9 /* PictureCollectionViewCell.swift */; };
 		7294545D27DBEA87006D25A9 /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294545C27DBEA87006D25A9 /* PicturesViewController.swift */; };
 		7294546027DBF9F5006D25A9 /* DetailPictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294545F27DBF9F5006D25A9 /* DetailPictViewController.swift */; };
+		72B5D87527E9FF60009872E6 /* Loading.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B5D87427E9FF60009872E6 /* Loading.xcframework */; };
+		72B5D87627E9FF60009872E6 /* Loading.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72B5D87427E9FF60009872E6 /* Loading.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		72C7E73227D86DB90037A2BC /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73127D86DB90037A2BC /* NetworkResult.swift */; };
 		72C7E73527D870580037A2BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73427D870580037A2BC /* User.swift */; };
 		72C7E73727D871C20037A2BC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C7E73627D871C20037A2BC /* Post.swift */; };
@@ -88,13 +88,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		726A960F27E907BE00B936AC /* Embed Frameworks */ = {
+		72B5D87727E9FF60009872E6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				726A960E27E907BE00B936AC /* Loading.xcframework in Embed Frameworks */,
+				72B5D87627E9FF60009872E6 /* Loading.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,6 +119,7 @@
 		7294545C27DBEA87006D25A9 /* PicturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
 		7294545F27DBF9F5006D25A9 /* DetailPictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPictViewController.swift; sourceTree = "<group>"; };
 		72AADF1A27E8F18D003DF31D /* Loading.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Loading.framework; path = "../Loading/Products/Debug-iphoneos/Loading.framework"; sourceTree = "<group>"; };
+		72B5D87427E9FF60009872E6 /* Loading.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Loading.xcframework; sourceTree = "<group>"; };
 		72C7E73127D86DB90037A2BC /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		72C7E73427D870580037A2BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		72C7E73627D871C20037A2BC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -178,7 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				726A960D27E907BE00B936AC /* Loading.xcframework in Frameworks */,
+				72B5D87527E9FF60009872E6 /* Loading.xcframework in Frameworks */,
 				7A46CE5A74425C8E639304A4 /* Pods_List_Post.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,6 +549,7 @@
 			isa = PBXGroup;
 			children = (
 				726A960627E9021400B936AC /* Loading.xcframework */,
+				72B5D87427E9FF60009872E6 /* Loading.xcframework */,
 				726A960527E900AF00B936AC /* Loading.framework-iphoneos.xcarchive */,
 				72AADF1A27E8F18D003DF31D /* Loading.framework */,
 				5753E786598CF22376CBE3F1 /* Pods_List_Post.framework */,
@@ -569,7 +571,7 @@
 				72D55EB427D647DB001BBA9F /* Frameworks */,
 				72D55EB527D647DB001BBA9F /* Resources */,
 				212C57AA6EEB60DD796BFD54 /* [CP] Embed Pods Frameworks */,
-				726A960F27E907BE00B936AC /* Embed Frameworks */,
+				72B5D87727E9FF60009872E6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
